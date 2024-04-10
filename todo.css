@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #FFEFD3;
+}
+
+h1 {
+    color: #294C60;
+}
+
+#new-item, #new-description, #new-priority {
+    padding: 10px;
+    margin: 5px 0;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 2px solid #FBD3B8;
+    width: calc(100% - 22px);
+}
+
+#new-description {
+    display: block;
+    margin-top: 10px;
+    resize: vertical;
+}
+
+#add-item {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #294C60;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+}
+
+#add-item:hover {
+    background-color: #213d4f;
+}
+
+#todo-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.todo-item {
+    background-color: #FFF;
+    border: 1px solid #FBD3B8;
+    margin-top: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* Needed for absolute positioning of the animation */
+}
+
+.complete-item {
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.complete-item:hover {
+    background-color: #449d44;
+}
+
+@keyframes firework {
+    0% { opacity: 0; transform: scale(0.5); }
+    50% { opacity: 1; transform: scale(1.2); color: #5cb85c; }
+    100% { opacity: 0; transform: scale(1); }
+}
+
+.firework-animation::after {
+    content: 'Completed!';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    animation: firework 1s ease-out forwards;
+    transform: translateX(-50%);
+    color: #5cb85c;
+    font-weight: bold;
+}
