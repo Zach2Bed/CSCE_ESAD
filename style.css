@@ -1,100 +1,48 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
-
-{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-
-body{
+body {
+  font-family: Arial, sans-serif;
+  background-color: #FFEFD3;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  background: white;
-}
-.tab{
-  background-color: #FFC49B;
-position: absolute;
-top: 0%;
-translate: transform(-50%, -50%);
-text-align: center;
-  color: 001B2E;
-  width: 100%;
-  height: 30px;
-  padding: 5px 5px 5px 5px;
-margin: 0 auto;
+  height: 100vh;
+  margin: 0;
 }
 
-.wrapper{
-  top: 50%;
-  width: 420px;
-  border: 2px solid;
-  background: transparent;
-  border-color: black;
-  padding: 30px 40px 4px 4px;
-  translate: transform(4000px, 40px);
-
-}
-
-.wrapper h1 {
-  font-size: 36px;
+.content {
   text-align: center;
+  padding: 20px;
 }
 
-.wrapper .input-box{
-  position: relative;
-  width: 100%;
-  height: 50px;
-  margin: 50px 0;
-  padding: 5px 5px 5px 5px;
-  border-color: black;
+h1 {
+  color: #294C60;
+  margin-bottom: 20px;
 }
 
-.input-box input {
-width: 100%;
-height: 100%;
-background: transparent;
-outline: none;
-border: 2px solid rgba(255, 255, 255, 0.5);
-border-radius: 90px;
-border-color: black;
-font-size: 16px;
-color: black;
-padding: 15px 5px 20px 20px;
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
-.input-box input::placeholder {
-  color: black;
-}
-
-.wrapper .btn {
-  width: 100%;
-  height: 45px;
-  background: #fff;
-  outline: none;
-  border-radius: 40px;
-  border-color: black;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.home-button {
+  padding: 15px 30px;
+  font-size: 18px;
+  background: linear-gradient(145deg, #294C60, #213d4f);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
   cursor: pointer;
-  font-size: 16px;
-  color: black;
-  font-weight: 600;
+  outline: none;
 }
 
-.wrapper .register-link {
-font-size: 14;
-text-align: center;
-margin-top: 20px 0 15px;
+.home-button:hover, .home-button:focus {
+  background: linear-gradient(145deg, #213d4f, #294C60);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-.register-link p a {
-  color: black;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.register-link p a:hover {
-  text-decoration: underline;
+.home-button:active {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transform: translateY(2px);
 }
