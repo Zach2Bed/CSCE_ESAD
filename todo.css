@@ -2,45 +2,47 @@ body {
     font-family: Arial, sans-serif;
     padding: 20px;
     background-color: #FFEFD3;
+    color: #294C60;
 }
 
 h1 {
     color: #294C60;
+    text-align: center;
 }
 
-#new-item, #new-description, #new-priority {
+input[type="text"], select, textarea, button {
+    width: calc(100% - 20px);  /* Full width minus padding */
     padding: 10px;
-    margin: 5px 0;
-    font-size: 16px;
+    margin-top: 5px;
     border-radius: 5px;
     border: 2px solid #FBD3B8;
-    width: calc(100% - 22px);
+    box-sizing: border-box; /* Includes padding and border in the element's width */
 }
 
-#new-description {
-    display: block;
-    margin-top: 10px;
-    resize: vertical;
+textarea {
+    display: block; /* Ensures the textarea is on a new line */
+    resize: vertical; /* Allows vertical resizing only */
+    margin-bottom: 10px; /* Space below the textarea */
 }
 
-#add-item {
-    padding: 10px 20px;
-    font-size: 16px;
+button {
     background-color: #294C60;
     color: white;
-    border: none;
-    border-radius: 5px;
     cursor: pointer;
-    display: block;
+    font-size: 16px;
+    display: block; /* Ensures buttons are full-width */
+    margin-top: 10px;
 }
 
-#add-item:hover {
+button:hover {
     background-color: #213d4f;
 }
 
 #todo-list {
     list-style-type: none;
     padding: 0;
+    border-top: 2px solid #FBD3B8; /* Line to separate tasks from input */
+    margin-top: 20px; /* Space between inputs and list */
 }
 
 .todo-item {
@@ -52,35 +54,4 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative; /* Needed for absolute positioning of the animation */
-}
-
-.complete-item {
-    background-color: #5cb85c;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.complete-item:hover {
-    background-color: #449d44;
-}
-
-@keyframes firework {
-    0% { opacity: 0; transform: scale(0.5); }
-    50% { opacity: 1; transform: scale(1.2); color: #5cb85c; }
-    100% { opacity: 0; transform: scale(1); }
-}
-
-.firework-animation::after {
-    content: 'Completed!';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    animation: firework 1s ease-out forwards;
-    transform: translateX(-50%);
-    color: #5cb85c;
-    font-weight: bold;
 }
